@@ -50,11 +50,10 @@ export function HeaderMenu({
             ? new URL(item.url).pathname
             : item.url;
         return (
-          <HeaderNavLink href={url}>
+          <HeaderNavLink href={url} key={item.id}>
             <NavLink
               className=""
               end
-              key={item.id}
               onClick={closeAside}
               prefetch="intent"
               // style={activeLinkStyle}
